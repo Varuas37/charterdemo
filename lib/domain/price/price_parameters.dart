@@ -26,6 +26,12 @@ class PriceParameters {
   factory PriceParameters.fromInput(String vehicleSelection, int vehicleCount,
       String pricingSelection, int pricingMethodUnit) {
     // We will be making sure that only valid value are passed.
+    // This check was added in 8:57pm. After I submitted the project.
+    // Have not implemented this check in the front yet. But,I just didn't feel like not checking this.
+    if (!vehicleTypeMap.containsKey(vehicleSelection) ||
+        !pricingMap.containsKey(pricingSelection)) {
+      throw Exception('Invalid Values Passed');
+    }
     VehicleType? vehicleType = vehicleTypeMap[vehicleSelection];
     PricingMethods? pricingMethod = pricingMap[pricingSelection];
     return PriceParameters(
