@@ -34,9 +34,9 @@ class PriceParameters {
     if (!pricingMap.containsKey(pricingSelection)) {
       throw Exception('Invalid Pricing Method Passed');
     }
-    VehicleType? vehicleType = vehicleTypeMap[vehicleSelection];
-    PricingMethods? pricingMethod = pricingMap[pricingSelection];
+    VehicleType vehicleType = vehicleTypeMap[vehicleSelection]!;
+    PricingMethods pricingMethod = pricingMap[pricingSelection]!;
     return PriceParameters(
-        vehicleType!, vehicleCount, pricingMethod!, pricingMethodUnit);
+        vehicleType, vehicleCount, pricingMethod, pricingMethodUnit);
   }
 }
