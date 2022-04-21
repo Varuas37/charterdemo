@@ -1,5 +1,7 @@
 // ignore: file_names
 // I have implemented class so as to simulate a real database. Although I have modified a few things here.
+// Note: [Updated April 20, 8:05]: At first I thought I wasn't allowed to use a database hence I chose to use this route.
+// I should have asked you for clarification. But, I think with the strucutre that we have, it's not a lot of work to just change this database.
 import 'package:injectable/injectable.dart';
 
 @singleton

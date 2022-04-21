@@ -27,9 +27,7 @@ class PriceParameters {
       String pricingSelection, int pricingMethodUnit) {
     // We will be making sure that only valid value are passed.
     VehicleType? vehicleType = vehicleTypeMap[vehicleSelection];
-    print("👀  $vehicleType");
     PricingMethods? pricingMethod = pricingMap[pricingSelection];
-    print("👀  $pricingMethod");
     return PriceParameters(
         vehicleType!, vehicleCount, pricingMethod!, pricingMethodUnit);
   }
