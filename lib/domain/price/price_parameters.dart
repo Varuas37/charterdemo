@@ -28,9 +28,11 @@ class PriceParameters {
     // We will be making sure that only valid value are passed.
     // This check was added in 8:57pm. After I submitted the project.
     // Have not implemented this check in the front yet. But,I just didn't feel like not checking this.
-    if (!vehicleTypeMap.containsKey(vehicleSelection) ||
-        !pricingMap.containsKey(pricingSelection)) {
-      throw Exception('Invalid Values Passed');
+    if (!vehicleTypeMap.containsKey(vehicleSelection)) {
+      throw Exception('Invalid Vehicle Selection Passed');
+    }
+    if (!pricingMap.containsKey(pricingSelection)) {
+      throw Exception('Invalid Pricing Method Passed');
     }
     VehicleType? vehicleType = vehicleTypeMap[vehicleSelection];
     PricingMethods? pricingMethod = pricingMap[pricingSelection];
